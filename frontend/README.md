@@ -1,50 +1,47 @@
-# React + TypeScript + Vite
+## How to run the application:
+The project uses Docker Compose to run the frontend and backend services. To run the application, you need to have Docker and Docker Compose installed on your machine. If you don't have Docker and Docker Compose installed, you can download them from the following links:
+#### [Install Docker](https://docs.docker.com/get-docker/)
+#### [Install Docker Compose](https://docs.docker.com/compose/install/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+## Starting the application:
+### 1. Build the Docker images:
+To build the Docker images, run the following command in the root directory of the project:
+```bash
+docker-compose build
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2. Run the application:
+To run the application, run the following command in the root directory of the project:
+```bash
+docker-compose up
 ```
+If you want to run the application in the background, you can use the `-d` flag:
+
+### 3. Access the web site:
+Visit the following URL in your browser to access the application:
+```
+http://localhost:8000
+```
+---
+## Utilities:
+### Test the backend server:
+To test the backend server, visit the following URL in your browser:
+```
+http://localhost:8000/api/test/
+```
+
+### Stop the application:
+To stop the application, run the following command in the root directory of the project:
+```bash
+docker-compose down
+```
+
+### Tips for local development:
+It can be useful to download dependencies locally to get better IDE support. To do this, you can run the following command in the `frontend` directory:
+```bash
+npm install
+```
+
+
+
