@@ -25,10 +25,10 @@ http://localhost:8000
 ```
 ---
 ## Utilities:
-### Test the backend server:
+### Testing the backend server:
 To test the backend server, visit the following URL in your browser:
 ```
-http://localhost:8000/api/test/
+http://localhost:3000/api/test/
 ```
 
 ### Stop the application:
