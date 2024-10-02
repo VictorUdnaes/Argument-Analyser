@@ -1,0 +1,19 @@
+.react-quill {
+    flex: 1;
+    width: 100%;
+    max-height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ql-toolbar {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 -2px 4px rgba(0, 0, 0, 0.3);
+    background-color: #f2f0ef;
+    border-radius: 20px 20px 0 0;
+}
+
+.ql-container {
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: #f2f0ef;
+    max-height: 900px;
+}

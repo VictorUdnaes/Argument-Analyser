@@ -1,22 +1,25 @@
+// @ts-ignore
 import React, { useState } from "react";
-import ReactQuill from "react-quill";
+// @ts-ignore
+import ReactQuill, {Quill} from "react-quill";
 import "react-quill/dist/quill.snow.css"; // Quill styles
 
+const Delta = Quill.import('delta');
+
 const RichTextEditor = () => {
-    const [text, setText] = useState("");
+    const [text, setText] = useState(new Delta()
+        .insert('Enter your argument here:', { font: '48px', bold: false})
+        .insert('\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n')
+
+    );
 
     const handleChange = (value: React.SetStateAction<string>) => {
         setText(value);
     };
 
     return (
-        <div>
-            <h2>Text Editor</h2>
-            <ReactQuill value={text} onChange={handleChange} />
-            <div>
-                <h3>Output</h3>
-                <div dangerouslySetInnerHTML={{ __html: text }} />
-            </div>
+        <div className={"TextEditor"}>
+            <ReactQuill value={text} onChange={handleChange} defaultValue={text}/>
         </div>
     );
 };

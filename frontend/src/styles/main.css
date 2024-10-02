@@ -1,0 +1,49 @@
+:root {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2F3136;
+}
+
+.AI {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    color: #4CAF50;
+    font-size: 2.5rem;
+}
+
+.header h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem; /* Adjust the size as needed */
+    color: #ffffff; /* Ensure the color contrasts well with the background */
+    font-weight: 600; /* Use a bold weight for a sleek look */
+}
+
+h2, li {
+    padding-left: 0;
+    font-weight: normal;
+}
+
+h3 {
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    font-size: 28px;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.TextEditor {
+    width: 100%;
+}

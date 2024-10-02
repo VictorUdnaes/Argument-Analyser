@@ -1,0 +1,52 @@
+.banner {
+    grid-area: banner;
+    color: white;
+    height: auto; /* Adjust height to fit content */
+    padding: 10px 0; /* Adjust padding as needed */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.banner-paragraph {
+    font-size: 16px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    color: #f2f0ef;
+    position: relative; /* Ensure the container is positioned relatively */
+}
+
+.banner-sub {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    background-color: transparent;
+    color: #4CAF50;
+    font-size: 1.8rem;
+    border: none;
+    position: relative; /* Position the button relatively */
+    z-index: 1; /* Ensure the button is above the text */
+}
+
+.banner-sub:hover {
+    cursor: pointer;
+    color: #52cd57;
+}
+
+.popup {
+    position: absolute; /* Position the popup absolutely */
+    top: 40px; /* Adjust as needed */
+    left: 0; /* Adjust as needed */
+    background-color: #333; /* Background color for the popup */
+    color: #fff; /* Text color for the popup */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+    z-index: 2; /* Ensure the popup is above other elements */
+    visibility: hidden; /* Hide the popup by default */
+    opacity: 0; /* Make the popup invisible */
+    transition: visibility 0s, opacity 0.3s ease; /* Smooth transition for visibility and opacity */
+}
+
+.banner-sub:hover + .popup {
+    visibility: visible; /* Show the popup on hover */
+    opacity: 1; /* Make the popup visible */
+}

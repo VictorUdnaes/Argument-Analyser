@@ -1,0 +1,30 @@
+.analyse-animation {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  justify-content: center; /* Align items horizontally centered */
+}
+
+.dots {
+  display: inline-block;
+  width: 1em; /* Fixed width to prevent shifting */
+  text-align: left;
+}
+
+.analyse-animation span {
+  margin-right: 5px; /* Add some space between the text and the dots */
+}
+
+.analysis-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #4CAF50; /* Add a green border */
+  border-radius: 30px; /* Rounded corners */
+  background-color: #3c3e44;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative; /* Add relative positioning */
+}

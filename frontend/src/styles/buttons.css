@@ -1,0 +1,32 @@
+.analyse-button, .collapse-button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline-block */
+    margin: 18px 5px; /* Some margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 25px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.analyse-button {
+    width: 250px;
+    font-size: 20px; /* Increase font size */
+}
+
+.collapse-button {
+    background-color: #4CAF50; /* Green background */
+    width: 130px;
+    font-size: 16px; /* Increase font size */
+    position: absolute; /* Add absolute positioning */
+    bottom: 0; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+}
+
+.analyse-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
