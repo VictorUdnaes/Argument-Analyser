@@ -18,6 +18,18 @@ const input = "Newtons første lov, treghetsloven, sier at et legeme vil forbli 
  */
 router.get('/api/get-analysis/', async (context) => {
     try {
+        console.log(`[SERVER]: { GET request received: /api/get-analysis/ }`);
+        const input = context.request.url.searchParams.get('text');
+        console.log(`[SERVER]: { GET request received: /api/get-analysis/, Input: ${input} }`);
+        if (!input) {
+            throw new Error("No text query parameter provided");
+        }
+        context.response.body = { message: input };
+    } catch (error) {
+        context.response.status = 500;
+        context.response.body = { error: error.message };
+    }
+        /*
         // Extract and evaluate single statements
         console.log(`[SERVER]: { GET request received: /api/get-analysis/ }`);
         const response1 = await getStatementExtractorResponse(input).then((response) => {
@@ -40,6 +52,7 @@ router.get('/api/get-analysis/', async (context) => {
         context.response.status = 500;
         context.response.body = { error: error.message };
     }
+     */
 });
 
 router.get('/api/test/', (context) => {

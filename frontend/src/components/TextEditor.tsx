@@ -1,20 +1,11 @@
-// @ts-ignore
-import React, { useState } from "react";
-// @ts-ignore
-import ReactQuill, {Quill} from "react-quill";
-import "react-quill/dist/quill.snow.css"; // Quill styles
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+import React from "react"; // Quill styles
 
-const Delta = Quill.import('delta');
-
-const RichTextEditor = () => {
-    const [text, setText] = useState(new Delta()
-        .insert('Enter your argument here:', { font: '48px', bold: false})
-        .insert('\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n')
-
-    );
-
+// @ts-expect-error
+export default function RichTextEditor({text, onSetRequest}) {
     const handleChange = (value: React.SetStateAction<string>) => {
-        setText(value);
+        onSetRequest(value); // Update the parent state
     };
 
     return (
@@ -24,4 +15,3 @@ const RichTextEditor = () => {
     );
 };
 
-export default RichTextEditor;
