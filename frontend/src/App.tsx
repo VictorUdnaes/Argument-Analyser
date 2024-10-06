@@ -12,6 +12,7 @@ const Delta = Quill.import('delta');
 function App() {
     const [requestText, setRequestText] = useState(new Delta()
         .insert('Birds can fly. Penguins cannot fly, therefore penguins are not birds.', {font: '48px', bold: false})
+        .insert('\n\n\n\n\n\n\n\n')
     );
     const [responseText, setResponseText] = useState("");
 

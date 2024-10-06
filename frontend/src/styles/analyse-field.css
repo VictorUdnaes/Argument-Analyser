@@ -7,7 +7,7 @@
   max-width: 90%; /* Ensure content does not exceed the container's width */
   max-height: 100%; /* Ensure content does not exceed the container's height */
   word-wrap: break-word; /* Break long words to fit within the container */
-  padding: 30px; /* Increase padding to ensure content is not too close to the borders */
+  padding: 30px 30px 60px;
   margin: 10px; /* Add margin to create space around the text box */
   box-sizing: content-box; /* Ensure padding is not included in the element's total width and height */
   line-height: 1.5;
