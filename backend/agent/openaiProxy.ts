@@ -11,6 +11,7 @@ import {
     STATEMENT_EXTRACTOR,
     ARGUMENT_CHECKER
 } from "./agentRoles.ts";
+import { config } from 'dotenv';
 
 export async function getStatementExtractorResponse(input: string) {
     return await getAgentResponse(
@@ -42,7 +43,7 @@ export async function getArgumentCheckerResponse(input: string) {
 
 async function getAgentResponse(role: string, request: string) {
     try {
-        const openai = new OpenAI({apiKey: ""});
+        const openai = new OpenAI({apiKey: process.env.OPENAI_API_KEY});
         const completion = await openai.chat.completions.create({
             model: "gpt-4o-mini",
             messages: [

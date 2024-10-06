@@ -32,16 +32,22 @@ function App() {
 
     async function getAnalysis() {
         console.log("fetching analysis...");
-        const query = new URLSearchParams({ text: requestText }).toString();
-        await fetch(`/api/get-analysis/?${query}`, {
+        const cleanedText = requestText.replace(/<\/?p>/g, '').replace(/<br>/g, '');
+        const query = new URLSearchParams({ text: cleanedText }).toString();
+        await fetch(`http://localhost:3000/api/get-analysis/?${query}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
             }
         })
-            .then(response => response.json())
+            .then(response => response.text()) // Get raw response text
+            .then(text => {
+                console.log("raw text: " + text);
+                return JSON.parse(text); // Attempt to parse JSON
+            })
             .then(data => {
                 setResponseText(data.message);
+                console.log(responseText);
             })
             .catch((error) => {
                 console.error('Error:', error);

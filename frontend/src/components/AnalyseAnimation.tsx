@@ -1,6 +1,10 @@
 import {useEffect, useState} from "react";
 
-export default function AnalyseAnimation({isAnalysing}) {
+interface AnalyseAnimationProps {
+    responeText?: string
+}
+
+export default function AnalyseAnimation({isAnalysing, responeText}) {
     const [dots, setDots] = useState(1);
 
     useEffect(() => {
@@ -20,10 +24,14 @@ export default function AnalyseAnimation({isAnalysing}) {
         return dots;
     };
 
-    return(
+    return (
         <div className={"analyse-animation"}>
-            <span>Analysing</span>
-            <span className="dots">{getDots(dots)}</span>
+            {responeText ? <span>{responeText}</span> :
+                <div>
+                    <span>Analysing</span>
+                    <span className="dots">{getDots(dots)}</span>
+                </div>
+            }
         </div>
-    );
-}
+        );
+    }

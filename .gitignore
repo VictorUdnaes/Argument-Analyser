@@ -2,3 +2,4 @@ node_modules
 .deno/
 .idea/
 .DS_Store
+.env

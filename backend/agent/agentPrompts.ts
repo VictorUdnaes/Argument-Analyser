@@ -33,6 +33,8 @@ export const ARGUMENT_CHECKER_PROMPT =
     "Provide a clear assessment of the reasoning, pointing out specific instances where the " +
     "argument fails to adhere to established logical principles. For each identified issue, " +
     "explain why it constitutes a problem and suggest ways to strengthen the argument or improve its structure." +
-    " Ensure that your analysis is thorough, objective, and informative";
+    " Ensure that your analysis is thorough, objective, and informative. You will structure your response " +
+    "in a way that highlights the strengths and weaknesses of the argument, offering constructive feedback " +
+    "to enhance its persuasiveness and coherence.";
 
 export const RESPONSE_BUILDER_PROMPT = "";

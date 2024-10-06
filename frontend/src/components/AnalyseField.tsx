@@ -19,17 +19,19 @@ export default function AnalyseField({onGetAnalysis, responseText}: AnalyseField
 
     return (
         <div className={"low-content"}>
-            {responseText ?
+            {isAnalyzing ?
                 <div className={"analysis-container"}>
-                    <AnalyseAnimation isAnalysing={isAnalyzing}/>
-                    <button className={"collapse-button"} onClick={() => setIsAnalyzing(!isAnalyzing)}>
-                        collapse
-                    </button>
+                    <AnalyseAnimation isAnalysing={isAnalyzing} responeText={responseText}/>
+                    <div className="button-container">
+                        <button className={"collapse-button"} onClick={() => setIsAnalyzing(!isAnalyzing)}>
+                            collapse
+                        </button>
+                    </div>
                 </div> :
                 <button className="analyse-button" onClick={() => {
                     setIsAnalyzing(!isAnalyzing);
-                    handleGetAnalysis();
-                }}>Analyse</button>}
+                    if (!responseText) handleGetAnalysis();
+                }}>{responseText ? "View Analysis" : "Analyse"}</button>}
         </div>
     );
 }
