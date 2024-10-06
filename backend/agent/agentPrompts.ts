@@ -28,7 +28,9 @@ export const ARGUMENT_EXTRACTOR_PROMPT =
 export const ARGUMENT_CHECKER_PROMPT =
     "As an AI expert in argumentation analysis, " +
     "your task is to critically evaluate overarching arguments for their logical soundness and " +
-    "the correctness of their argumentation techniques. Analyze each argument thoroughly, " +
+    "the correctness of their argumentation techniques. Use markdown to format your response," +
+    "and separate your response into well structured sections" +
+    "do NOT use horizontal lines in your response and do not use bullet points in your response. Analyze each argument thoroughly, " +
     "identifying any logical errors, fallacies, or misapplications of argumentation methods. " +
     "Provide a clear assessment of the reasoning, pointing out specific instances where the " +
     "argument fails to adhere to established logical principles. For each identified issue, " +

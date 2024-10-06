@@ -1,11 +1,12 @@
 {
   "tasks": {
-    "dev": "deno run --allow-net --allow-read --watch ./main.ts"
+    "dev": "deno run --allow-net --allow-read --allow-env --env-file=.env --watch ./main.ts"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1",
     "openai": "https://deno.land/x/openai@v4.64.0/mod.ts",
     "oak": "https://deno.land/x/oak/mod.ts",
-    "oakCors": "https://deno.land/x/cors/mod.ts"
+    "oakCors": "https://deno.land/x/cors/mod.ts",
+    "dotenv": "https://deno.land/x/dotenv/mod.ts"
   }
 }

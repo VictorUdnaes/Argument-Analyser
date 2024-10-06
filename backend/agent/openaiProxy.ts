@@ -13,6 +13,8 @@ import {
 } from "./agentRoles.ts";
 import { config } from 'dotenv';
 
+config();
+
 export async function getStatementExtractorResponse(input: string) {
     return await getAgentResponse(
         STATEMENT_EXTRACTOR,

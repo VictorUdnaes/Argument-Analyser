@@ -64,6 +64,7 @@
   },
   "redirects": {
     "https://deno.land/x/cors/mod.ts": "https://deno.land/x/cors@v1.2.2/mod.ts",
+    "https://deno.land/x/dotenv/mod.ts": "https://deno.land/x/dotenv@v3.2.2/mod.ts",
     "https://deno.land/x/oak/mod.ts": "https://deno.land/x/oak@v17.0.0/mod.ts"
   },
   "remote": {
@@ -75,6 +76,8 @@
     "https://deno.land/x/cors@v1.2.2/oakCors.ts": "1348dc7673c61b85d2e80559a7b44f8e0246eaa6bcc6ec744fafe5d9b13b5c71",
     "https://deno.land/x/cors@v1.2.2/opineCors.ts": "fb5790115c26b7061d84b8d6c17d258a1e241bcab75b0bc3ca1fdb2e57bc5072",
     "https://deno.land/x/cors@v1.2.2/types.ts": "97546633ccc7f0df7a29bacba5d91dc6f61decdd1b65258300244dba905d34b8",
+    "https://deno.land/x/dotenv@v3.2.2/mod.ts": "077b48773de9205266a0b44c3c3a3c3083449ed64bb0b6cc461b95720678d38e",
+    "https://deno.land/x/dotenv@v3.2.2/util.ts": "693730877b13f8ead2b79b2aa31e2a0652862f7dc0c5f6d2f313f4d39c7b7670",
     "https://deno.land/x/oak@v17.0.0/application.ts": "f6b48422d3207a4cfbd4f535fd54999dc41e33a42e08447fe166fac8c0d07067",
     "https://deno.land/x/oak@v17.0.0/body.ts": "f84e31e923fdadc3463519a4ab5409083d00281ae4cae00b9594af3e808f3007",
     "https://deno.land/x/oak@v17.0.0/context.ts": "345cfdaa5a2310558ee0863f2fba5f9ba648188412b16ce342c33266c085f5d3",

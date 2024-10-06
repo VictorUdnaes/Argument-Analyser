@@ -1,10 +1,11 @@
 import {useEffect, useState} from "react";
+import { marked } from "marked";
 
-interface AnalyseAnimationProps {
+interface AnalysisContentProps {
     responeText?: string
 }
 
-export default function AnalyseAnimation({isAnalysing, responeText}) {
+export default function AnalysisContent({isAnalysing, responeText}) {
     const [dots, setDots] = useState(1);
 
     useEffect(() => {
@@ -16,6 +17,11 @@ export default function AnalyseAnimation({isAnalysing, responeText}) {
         }
     }, [isAnalysing]);
 
+    const getMarkdownText = () => {
+        const rawMarkup = marked(responeText);
+        return { __html: rawMarkup };
+    };
+
     const getDots = (count: number) => {
         let dots = "";
         for (let i = 0; i < count; i++) {
@@ -25,13 +31,13 @@ export default function AnalyseAnimation({isAnalysing, responeText}) {
     };
 
     return (
-        <div className={"analyse-animation"}>
-            {responeText ? <span>{responeText}</span> :
+        <div className={"analyse-content"}>
+            {responeText ? <div dangerouslySetInnerHTML={getMarkdownText()}/> :
                 <div>
                     <span>Analysing</span>
                     <span className="dots">{getDots(dots)}</span>
                 </div>
             }
         </div>
-        );
-    }
+    );
+}

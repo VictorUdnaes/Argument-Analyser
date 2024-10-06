@@ -11,8 +11,7 @@ const Delta = Quill.import('delta');
 
 function App() {
     const [requestText, setRequestText] = useState(new Delta()
-        .insert('Enter your argument here:', {font: '48px', bold: false})
-        .insert('\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n')
+        .insert('Birds can fly. Penguins cannot fly, therefore penguins are not birds.', {font: '48px', bold: false})
     );
     const [responseText, setResponseText] = useState("");
 

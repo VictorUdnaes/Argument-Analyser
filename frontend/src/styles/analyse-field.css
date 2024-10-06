@@ -1,23 +1,22 @@
-.analyse-animation {
+.analyse-content {
   display: flex;
-  align-items: center; /* Align items vertically centered */
+  align-items: flex-start; /* Align items to the top */
   justify-content: center; /* Align items horizontally centered */
-}
-
-.dots {
-  display: inline-block;
-  width: 1em; /* Fixed width to prevent shifting */
-  text-align: left;
-}
-
-.analyse-animation span {
-  margin-right: 5px; /* Add some space between the text and the dots */
+  font-size: 20px;
+  overflow: auto; /* Add scrollbars if content overflows */
+  max-width: 90%; /* Ensure content does not exceed the container's width */
+  max-height: 100%; /* Ensure content does not exceed the container's height */
+  word-wrap: break-word; /* Break long words to fit within the container */
+  padding: 30px; /* Increase padding to ensure content is not too close to the borders */
+  margin: 10px; /* Add margin to create space around the text box */
+  box-sizing: content-box; /* Ensure padding is not included in the element's total width and height */
+  line-height: 1.5;
 }
 
 .analysis-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Align content to the top */
   align-items: center;
   width: 100%;
   height: 100%;
@@ -27,4 +26,15 @@
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
   position: relative; /* Add relative positioning */
+  padding-top: 20px; /* Add padding to the top */
+}
+
+.dots {
+  display: inline-block;
+  width: 1em; /* Fixed width to prevent shifting */
+  text-align: left;
+}
+
+.analyse-content span {
+  margin-right: 5px; /* Add some space between the text and the dots */
 }

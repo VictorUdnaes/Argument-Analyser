@@ -1,4 +1,4 @@
-import AnalyseAnimation from "./AnalyseAnimation";
+import AnalysisContent from "./AnalysisContent";
 import {useState} from "react";
 
 interface AnalyseFieldProps {
@@ -21,7 +21,7 @@ export default function AnalyseField({onGetAnalysis, responseText}: AnalyseField
         <div className={"low-content"}>
             {isAnalyzing ?
                 <div className={"analysis-container"}>
-                    <AnalyseAnimation isAnalysing={isAnalyzing} responeText={responseText}/>
+                    <AnalysisContent isAnalysing={isAnalyzing} responeText={responseText}/>
                     <div className="button-container">
                         <button className={"collapse-button"} onClick={() => setIsAnalyzing(!isAnalyzing)}>
                             collapse
